@@ -18,7 +18,7 @@ print list(grouper(ascii_letters, 3))
 >>> l = range(1,11)
 >>> i = iter(l)
 >>> zip(i, i, i)
-[(1, 2, 3), (4, 5, 6), (7, 8, 9)]
+ [(1, 2, 3), (4, 5, 6), (7, 8, 9)]
 >>>
 '''
 
