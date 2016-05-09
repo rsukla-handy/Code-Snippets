@@ -1,4 +1,3 @@
-
 from itertools import izip_longest
 from string import ascii_letters
 def grouper(iterable, n, fillvalue=None):
