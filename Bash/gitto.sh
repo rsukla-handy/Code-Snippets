@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-
+# gitto to save my time
 # command line arguments are captured in the bash_argv
 # echo ${BASH_ARGV[*]}
 
@@ -13,6 +13,7 @@ function git_commit() {
 #  echo "$@"
 if [ -z $1  ]
  then
+    echo "Files added"
     git status | grep modified | awk '{ print $2 }' | xargs git add
  else
     for i in $(echo $1 | sed "s/,/ /g")
@@ -24,6 +25,7 @@ fi
 git commit -m $2
 if [ -z $3  ]
  then
+    echo "Pushing all files"
     git branch | grep "*" | awk '{print $2}' | xargs git push origin
  else
     git push origin $3
